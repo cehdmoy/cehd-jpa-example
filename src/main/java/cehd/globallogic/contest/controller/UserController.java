@@ -34,7 +34,7 @@ public class UserController {
 
     @DeleteMapping(path = "user/{id}")
     @ResponseStatus(HttpStatus.ACCEPTED)
-    public String deteleUser(@PathVariable String id) {
+    public String deleteUser(@PathVariable String id) {
         userService.deleteUser(id);
         return "Wena loco";
     }
