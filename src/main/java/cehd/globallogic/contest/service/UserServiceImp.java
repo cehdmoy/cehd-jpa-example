@@ -29,7 +29,7 @@ public class UserServiceImp implements UserService {
     }
 
     @Override
-    public UserCreateResponse retrieveUSer(String id) {
+    public UserCreateResponse retrieveUser(String id) {
         Optional<User> user = userJPAFacadeImp.retrieveUserFromDb(id);
         return user.map(userToMap -> mapperSaveCase.mapFromUserToCreateUserResponse(userToMap))
                 .orElseThrow(UserNotFoundException::new);
