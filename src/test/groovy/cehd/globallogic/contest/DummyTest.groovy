@@ -11,6 +11,6 @@ class DummyTest extends Specification {
     def 'Should not be run'() {
         expect: 'Should return the correct message'
         println 'Should not be run'
-        'Hello World!_' == 'Hello World!'
+        'Hello World!' == 'Hello World!'
     }
 }
