@@ -29,13 +29,13 @@ public class UserController {
     @GetMapping(path = "user/{id}")
     @ResponseStatus(HttpStatus.OK)
     public UserCreateResponse retrieveUser(@PathVariable String id) {
-        return userService.retrieveUSer(id);
+        return userService.retrieveUser(id);
     }
 
     @DeleteMapping(path = "user/{id}")
     @ResponseStatus(HttpStatus.ACCEPTED)
     public String deleteUser(@PathVariable String id) {
         userService.deleteUser(id);
-        return "Wena loco";
+        return "";
     }
 }
